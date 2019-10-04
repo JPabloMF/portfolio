@@ -1,0 +1,119 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Black.ttf");
+  src: url("../fonts/Roboto-Bold.ttf");
+  src: url("../fonts/Roboto-Medium.ttf");
+  src: url("../fonts/Roboto-Regular.ttf");
+  src: url("../fonts/Roboto-Thin.ttf");
+  src: url("../fonts/Roboto-Light.ttf");
+}
+
+:root {
+  --red: #ff3d00;
+  --strongBlue: #049dbf;
+  --pink: #f783ac;
+  --blue: #0fbcf9;
+  --orange: #f05033;
+  --yellow: #f9e53b;
+  --black: #000;
+  --white: #fff;
+}
+
+body {
+  margin: 0;
+  background: rgb(24, 29, 30);
+  background: linear-gradient(
+    142deg,
+    rgba(24, 29, 30, 1) 0%,
+    rgba(43, 47, 49, 1) 100%
+  );
+  font-family: "Roboto", sans-serif;
+}
+
+*,*::after,*::before{
+  box-sizing: border-box;
+}
+
+main {
+  padding: 50px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__logo {
+  width: 170px;
+}
+
+.main__name {
+  font-size: 60px;
+  color: var(--white);
+  margin: 0;
+  font-weight: bold;
+}
+
+.main__nickname {
+  font-size: 30px;
+  color: var(--blue);
+  margin: 0;
+}
+
+.main__line {
+  width: 100px;
+  border: 1px solid #797979;
+}
+
+.main__ocupation {
+  font-size: 20px;
+  font-weight: lighter;
+  color: var(--white);
+  margin: 0;
+}
+
+.main__description{
+  font-size: 20px;
+  color: var(--white);
+  width: 600px;
+  text-align: justify;
+}
+
+.icons{
+  font-size: 40px;
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.icons__html{
+  color: var(--red);
+}
+
+.icons__css{
+  color: var(--strongBlue);
+}
+
+.icons__js{
+  color: var(--yellow);
+}
+
+.icons__react{
+  color: var(--blue);
+}
+
+.icons__sass{
+  color: var(--pink);
+}
+
+.icons__git{
+  color: var(--orange);
+}
+
+/* Shapes */
+.shapes{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
