@@ -125,6 +125,9 @@ main {
   .main__description{
     margin: 20px 10%;
   }
+  .main__name{
+    font-size: 50px;
+  }
 }
 
 /* small */
