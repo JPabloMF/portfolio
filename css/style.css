@@ -117,3 +117,37 @@ main {
   height: 100%;
   z-index: -1;
 }
+
+/* MEDIA QUERYS */
+/* Extra small */
+@media screen and (max-width: 576px){}
+
+/* small */
+@media (min-width: 577px) and (max-width: 767px){}
+
+/* Medium */
+@media (min-width: 769px) and (max-width: 992px){
+    
+}
+/* Large */
+@media (min-width: 993px) and (max-width: 1200px){
+    
+}
+/* Extra large */
+@media (min-width: 1200px){
+    
+}
+
+/* Scroll */
+
+body::-webkit-scrollbar {
+  width: 15px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #95a5a6;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #e84c3d;
+}
