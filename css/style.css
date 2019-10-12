@@ -104,6 +104,14 @@ nav {
   transform: translateX(6px) translateY(18px);
 }
 
+.btnmenu{}
+
+.btnmenu__square1{}
+
+.btnmenu__square2{}
+
+.btnmenu__square3{}
+
 /* Main */
 main {
   padding: 50px 0;
