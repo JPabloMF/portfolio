@@ -106,6 +106,10 @@ nav {
 
 .btnmenu{}
 
+.btnmenu__square{
+  display: block;
+}
+
 .btnmenu__square1{}
 
 .btnmenu__square2{}
