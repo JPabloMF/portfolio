@@ -236,6 +236,9 @@ main {
   .btnmenu{
     display: block;
   }
+  .menu-responsive{
+    display: none;
+  }
 }
 
 /* small */
