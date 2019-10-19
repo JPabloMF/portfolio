@@ -127,6 +127,15 @@ nav {
 
 .btnmenu__square--3{}
 
+/* menu responsive */
+.menu-responsive{
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 0;
+  display: none;
+}
+
 /* Main */
 main {
   padding: 50px 0;
