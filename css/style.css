@@ -239,6 +239,9 @@ main {
   .menu-responsive{
     display: none;
   }
+  .menu{
+    display: none;
+  }
 }
 
 /* small */
