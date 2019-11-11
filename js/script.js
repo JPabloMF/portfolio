@@ -3,11 +3,12 @@
   
   function moveBackground() {
     const element = document.querySelector('body');
-
-    element.addEventListener('mousemove', (e) => {
-      element.style.backgroundPositionX = -e.offsetX + 'px';
-      element.style.backgroundPositionY = -e.offsetY + 'px';
-    });
+    let translation = 0;
+    setInterval(()=>{
+      element.style.backgroundPositionX = -translation + 'px';
+      element.style.backgroundPositionY = -translation + 'px';
+      translation++;
+    },10)
   }
   
   function selectItemsMenu(){

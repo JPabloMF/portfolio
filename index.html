@@ -89,47 +89,97 @@
       </ul>
     </nav>
     <main id="aboutme">
-      <img src="./assets/me.png" alt="mfcoder" class="main__logo no-pointer" />
-      <p class="main__name no-pointer">JUAN PABLO</p>
-      <p class="main__nickname no-pointer">MF CODER</p>
+      <img src="./assets/me.png" alt="mfcoder" class="main__logo no-pointer" data-aos="slide-down"/>
+      <p class="main__name no-pointer" data-aos="slide-down">JUAN PABLO</p>
+      <p class="main__nickname no-pointer" data-aos="slide-down">MF CODER</p>
       <hr class="main__line no-pointer" />
-      <h1 class="main__ocupation no-pointer">Front End Developer</h1>
-      <p class="main__description no-pointer">
+      <h1 class="main__ocupation no-pointer" data-aos="flip-down">Front End Developer</h1>
+      <p class="main__description no-pointer" data-aos="flip-up">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. At nesciunt
         nemo quisquam blanditiis? Impedit dolorum mollitia ducimus in sequi.
       </p>
       <div class="icons no-pointer">
-        <i class="fab fa-html5 icons__html"></i>
-        <i class="fab fa-css3-alt icons__css"></i>
-        <i class="fab fa-js icons__js"></i>
-        <i class="fab fa-react icons__react"></i>
-        <i class="fab fa-sass icons__sass"></i>
-        <i class="fab fa-git-alt icons__git"></i>
+        <i
+          class="fab fa-html5 icons__html"
+          data-aos="fade-in"
+          data-aos-delay="400"
+        ></i>
+        <i
+          class="fab fa-css3-alt icons__css"
+          data-aos="fade-in"
+          data-aos-delay="300"
+        ></i>
+        <i
+          class="fab fa-js icons__js"
+          data-aos="fade-in"
+          data-aos-delay="100"
+        ></i>
+        <i
+          class="fab fa-react icons__react"
+          data-aos="fade-in"
+          data-aos-delay="100"
+        ></i>
+        <i
+          class="fab fa-sass icons__sass"
+          data-aos="fade-in"
+          data-aos-delay="300"
+        ></i>
+        <i
+          class="fab fa-git-alt icons__git"
+          data-aos="fade-in"
+          data-aos-delay="400"
+        ></i>
       </div>
     </main>
     <section id="projects" class="projects">
-      <h2 class="projects__title" data-aos="fade-in" data-aos-delay="350">PROJECTS</h2>
+      <h2 class="projects__title" data-aos="fade-in" data-aos-delay="350">
+        PROJECTS
+      </h2>
       <ul class="projects__list no-pointer">
-        <li class="projects__item" data-aos="slide-right" data-aos-delay="250">
-          <div class="project__commingsoon">
-            <span class="no-show">COMING SOON</span>
+        <li class="projects__item" data-aos="slide-right" data-aos-delay="50">
+          <div class="project__commingsoon no-show">
+            <span class="project_commingsoon__text">COMMING SOON</span>
           </div>
-          <img src="./img/dailfitylogo.png" class="project__picture" alt="dailifity">
-          <span>DailiFity</span>
+          <img
+            src="./img/dailfitylogo.png"
+            class="project__picture"
+            alt="dailifity"
+          />
+          <h3 class="no-margin">DailiFity</h3>
+          <div class="project__information">
+            <h3 class="project__title project__title--dailifity">Dailifity</h3>
+            <p class="project__description">
+              DailiFity it's a platform that You can use to have an order in
+              your training routing.
+            </p>
+            <p class="project__description">
+              You'll have three routines during three weeks working on the most
+              important muscles
+            </p>
+            <a class="project__btn">Go to DailiFity</a>
+          </div>
         </li>
-        <li class="projects__item" data-aos="slide-down" data-aos-delay="250">
+        <li class="projects__item" data-aos="slide-down" data-aos-delay="50">
           <div class="project__commingsoon">
-            <span>COMING SOON</span>
+            <span class="project_commingsoon__text">COMMING SOON</span>
           </div>
-          <img src="./img/test1.png" class="project__picture" alt="grit bills">
-          <span>Grit Bills</span>
+          <img
+            src="./img/test1.png"
+            class="project__picture"
+            alt="grit bills"
+          />
+          <h3 class="no-margin">Grit Bills</h3>
         </li>
-        <li class="projects__item" data-aos="slide-left" data-aos-delay="250">
+        <li class="projects__item" data-aos="slide-left" data-aos-delay="50">
           <div class="project__commingsoon">
-            <span>COMING SOON</span>
+            <span class="project_commingsoon__text">COMMING SOON</span>
           </div>
-          <img src="./img/test2.png" class="project__picture" alt="english platform">
-          <span>English Platform</span>
+          <img
+            src="./img/test2.png"
+            class="project__picture"
+            alt="english platform"
+          />
+          <h3 class="no-margin">English Platform</h3>
         </li>
       </ul>
     </section>
