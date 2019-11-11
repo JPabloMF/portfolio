@@ -18,15 +18,16 @@
     <meta name="copyright" content="JuanPabloMF2019" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>JUAN PABLO</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./css/style.css" />
     <link
       href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
-    <nav>
+    <nav class="no-pointer">
       <!-- responsive menu -->
       <button class="btnmenu">
         <span class="btnmenu__square btnmenu__square--1"></span>
@@ -60,26 +61,26 @@
         </li>
       </ul>
       <!-- menu -->
-      <ul class="menu">
-        <li class="menu__item menu__item--active">
-          <a href="#">
+      <ul class="menu" id="menu">
+        <li class="menu__item menu__item--active pointer">
+          <a href="#aboutme">
             <span class="menu__item-name">About me</span>
             <span class="menu__item-marker"></span>
           </a>
         </li>
-        <li class="menu__item">
-          <a href="#">
+        <li class="menu__item pointer">
+          <a href="#projects">
             <span class="menu__item">Projects</span>
             <span class="menu__item-marker"></span>
           </a>
         </li>
-        <li class="menu__item">
+        <li class="menu__item pointer">
           <a href="#">
             <span class="menu__item-name">Contact</span>
             <span class="menu__item-marker"></span>
           </a>
         </li>
-        <li class="menu__item">
+        <li class="menu__item pointer">
           <a href="#">
             <span class="menu__item-name">Blog</span>
             <span class="menu__item-marker"></span>
@@ -87,7 +88,7 @@
         </li>
       </ul>
     </nav>
-    <main>
+    <main id="aboutme">
       <img src="./assets/me.png" alt="mfcoder" class="main__logo no-pointer" />
       <p class="main__name no-pointer">JUAN PABLO</p>
       <p class="main__nickname no-pointer">MF CODER</p>
@@ -106,6 +107,35 @@
         <i class="fab fa-git-alt icons__git"></i>
       </div>
     </main>
+    <section id="projects" class="projects">
+      <h2 class="projects__title" data-aos="fade-in" data-aos-delay="350">PROJECTS</h2>
+      <ul class="projects__list no-pointer">
+        <li class="projects__item" data-aos="slide-right" data-aos-delay="250">
+          <div class="project__commingsoon">
+            <span class="no-show">COMING SOON</span>
+          </div>
+          <img src="./img/dailfitylogo.png" class="project__picture" alt="dailifity">
+          <span>DailiFity</span>
+        </li>
+        <li class="projects__item" data-aos="slide-down" data-aos-delay="250">
+          <div class="project__commingsoon">
+            <span>COMING SOON</span>
+          </div>
+          <img src="./img/test1.png" class="project__picture" alt="grit bills">
+          <span>Grit Bills</span>
+        </li>
+        <li class="projects__item" data-aos="slide-left" data-aos-delay="250">
+          <div class="project__commingsoon">
+            <span>COMING SOON</span>
+          </div>
+          <img src="./img/test2.png" class="project__picture" alt="english platform">
+          <span>English Platform</span>
+        </li>
+      </ul>
+    </section>
+    <footer></footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>
