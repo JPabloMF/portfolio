@@ -1,39 +1,56 @@
-(function() {
-  AOS.init();
-  
-  function moveBackground() {
-    const element = document.querySelector('body');
-    let translation = 0;
-    setInterval(()=>{
-      element.style.backgroundPositionX = -translation + 'px';
-      element.style.backgroundPositionY = -translation + 'px';
-      translation++;
-    },10)
-  }
-  
-  function selectItemsMenu(){
-    const elements = document.querySelectorAll('#menu li');
-    const selectedElement = "";
-  }
+AOS.init({ anchorPlacement: 'top-bottom' });
 
-  var lastScrollTop = 0;
-  // element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
-  document.querySelector('body').addEventListener(
-    'scroll',
-    function() {
-      // or window.addEventListener("scroll"....
-      var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
-      if (st > lastScrollTop) {
-        // downscroll code
-        console.log('downscroll');
-      } else {
-        // upscroll code
-        console.log('upscroll');
-      }
-      lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-    },
-    false
-  );
+const listItems = document.querySelectorAll('#menu li a');
+const sections = document.querySelectorAll('.section');
+const sectionPositions = {};
+const currentSection = "aboutme"
 
-  moveBackground();
-})();
+// console.log(sections[1].getBoundingClientRect());
+// console.log(sections);
+
+function moveBackground() {
+  const body = document.querySelector('body');
+  let translation = 0;
+  setInterval(() => {
+    body.style.backgroundPositionX = -translation + 'px';
+    body.style.backgroundPositionY = -translation + 'px';
+    translation++;
+  }, 10);
+}
+
+function selectItem(selectedElement) {
+  listItems.forEach((element) => {
+    if (element.hash === `#${selectedElement}`) {
+      element.parentNode.classList.add('menu__item--active');
+    } else {
+      element.parentNode.classList.remove('menu__item--active');
+    }
+  });
+}
+
+function getSectionPositions() {
+  sections.forEach((element) => {
+    sectionPositions[element.id] = element.getBoundingClientRect().top;
+  });
+  console.log(sectionPositions);
+}
+
+function scrollInSections() {
+  window.onscroll = function(e) {
+    // print "false" if direction is down and "true" if up
+    console.log(this.oldScroll > this.scrollY);
+    if (this.oldScroll > this.scrollY) {
+
+    } else {
+      window.scrollTo({
+        top: 500,
+        behavior: 'smooth'
+      });
+    }
+    this.oldScroll = this.scrollY;
+  };
+}
+
+moveBackground();
+getSectionPositions();
+scrollInSections();

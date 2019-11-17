@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
-    <nav class="no-pointer">
+    <nav>
       <!-- responsive menu -->
       <button class="btnmenu">
         <span class="btnmenu__square btnmenu__square--1"></span>
@@ -36,19 +36,19 @@
       </button>
       <ul class="menu-responsive">
         <li class="menu-responsive__item menu-responsive__item--active">
-          <a href="#">
+          <a href="#aboutme">
             <span class="menu-responsive__item-name">About me</span>
             <span class="menu-responsive__item-underline"></span>
           </a>
         </li>
         <li class="menu-responsive__item">
-          <a href="#">
+          <a href="#projects">
             <span class="menu-responsive__item-name">Projects</span>
             <span class="menu-responsive__item-underline"></span>
           </a>
         </li>
         <li class="menu-responsive__item">
-          <a href="#">
+          <a href="#contact">
             <span class="menu-responsive__item-name">Contact</span>
             <span class="menu-responsive__item-underline"></span>
           </a>
@@ -62,25 +62,28 @@
       </ul>
       <!-- menu -->
       <ul class="menu" id="menu">
-        <li class="menu__item menu__item--active pointer">
+        <li
+          class="menu__item menu__item--active"
+          onclick="selectItem('aboutme')"
+        >
           <a href="#aboutme">
             <span class="menu__item-name">About me</span>
             <span class="menu__item-marker"></span>
           </a>
         </li>
-        <li class="menu__item pointer">
+        <li class="menu__item" onclick="selectItem('projects')">
           <a href="#projects">
-            <span class="menu__item">Projects</span>
+            <span class="menu__item-name">Projects</span>
             <span class="menu__item-marker"></span>
           </a>
         </li>
-        <li class="menu__item pointer">
-          <a href="#">
+        <li class="menu__item" onclick="selectItem('contact')">
+          <a href="#contact">
             <span class="menu__item-name">Contact</span>
             <span class="menu__item-marker"></span>
           </a>
         </li>
-        <li class="menu__item pointer">
+        <li class="menu__item">
           <a href="#">
             <span class="menu__item-name">Blog</span>
             <span class="menu__item-marker"></span>
@@ -88,12 +91,19 @@
         </li>
       </ul>
     </nav>
-    <main id="aboutme">
-      <img src="./assets/me.png" alt="mfcoder" class="main__logo no-pointer" data-aos="slide-down"/>
+    <main id="aboutme" class="section">
+      <img
+        src="./assets/me.png"
+        alt="mfcoder"
+        class="main__logo no-pointer"
+        data-aos="slide-down"
+      />
       <p class="main__name no-pointer" data-aos="slide-down">JUAN PABLO</p>
       <p class="main__nickname no-pointer" data-aos="slide-down">MF CODER</p>
       <hr class="main__line no-pointer" />
-      <h1 class="main__ocupation no-pointer" data-aos="flip-down">Front End Developer</h1>
+      <h1 class="main__ocupation no-pointer" data-aos="flip-down">
+        Front End Developer
+      </h1>
       <p class="main__description no-pointer" data-aos="flip-up">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. At nesciunt
         nemo quisquam blanditiis? Impedit dolorum mollitia ducimus in sequi.
@@ -103,35 +113,41 @@
           class="fab fa-html5 icons__html"
           data-aos="fade-in"
           data-aos-delay="400"
+          data-aos-offset="0"
         ></i>
         <i
           class="fab fa-css3-alt icons__css"
           data-aos="fade-in"
           data-aos-delay="300"
+          data-aos-offset="0"
         ></i>
         <i
           class="fab fa-js icons__js"
           data-aos="fade-in"
           data-aos-delay="100"
+          data-aos-offset="0"
         ></i>
         <i
           class="fab fa-react icons__react"
           data-aos="fade-in"
           data-aos-delay="100"
+          data-aos-offset="0"
         ></i>
         <i
           class="fab fa-sass icons__sass"
           data-aos="fade-in"
           data-aos-delay="300"
+          data-aos-offset="0"
         ></i>
         <i
           class="fab fa-git-alt icons__git"
           data-aos="fade-in"
           data-aos-delay="400"
+          data-aos-offset="0"
         ></i>
       </div>
     </main>
-    <section id="projects" class="projects">
+    <section id="projects" class="section projects">
       <h2 class="projects__title" data-aos="fade-in" data-aos-delay="350">
         PROJECTS
       </h2>
@@ -150,11 +166,11 @@
             <h3 class="project__title project__title--dailifity">Dailifity</h3>
             <p class="project__description">
               DailiFity it's a platform that You can use to have an order in
-              your training routing.
+              your training routin.
             </p>
             <p class="project__description">
-              You'll have three routines during three weeks working on the most
-              important muscles
+              You'll have three routines during three weeks, working on the most
+              important muscles.
             </p>
             <a class="project__btn">Go to DailiFity</a>
           </div>
@@ -182,6 +198,11 @@
           <h3 class="no-margin">English Platform</h3>
         </li>
       </ul>
+    </section>
+    <section id="contact" class="section contact">
+      <h2 class="contact__title" data-aos="fade-in" data-aos-delay="350">
+        CONTACT
+      </h2>
     </section>
     <footer></footer>
 

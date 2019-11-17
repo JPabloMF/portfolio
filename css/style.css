@@ -275,7 +275,7 @@ main {
 }
 
 .project__commingsoon {
-  background-color: rgba(0, 0, 0, 0.76);
+  background-color: rgba(62, 62, 62, 0.76);
   position: absolute;
   width: 100%;
   height: 100%;
@@ -293,7 +293,7 @@ main {
 }
 
 .project__information {
-  background-color: rgba(0, 0, 0, 0.76);
+  background-color: rgba(62, 62, 62, 0.76);
   position: absolute;
   width: 100%;
   height: 100%;
@@ -331,11 +331,22 @@ main {
     #8f67e7,
     #656bda,
     #3e6ac8,
-    #3f5aa9,
-    #4b3f81,
-    #47255b,
-    #3a0e37
+    #3f5aa9
   );
+}
+
+/* Contact */
+.contact {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__title {
+  text-align: end;
+  margin-right: 50px;
+  font-size: 60px;
+  color: var(--white);
 }
 
 /* Shapes */
