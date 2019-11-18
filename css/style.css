@@ -354,8 +354,10 @@ main {
   height: 60vh;
   margin: auto;
   padding: 100px 0;
-  background-image: url(../assets/bgform.png);
-  background-size: 100% 100%;
+  background-image: url(../assets/shapebg1.png), url(../assets/shapebg2.png),
+    url(../assets/shapebg1.png), url(../assets/bgform.png);
+  background-position: 100px, center, 75%, center;
+  background-size: auto 30%, auto 90%, auto 20%, 100% 100%;
   background-repeat: no-repeat;
   text-align: center;
   display: flex;
@@ -404,7 +406,7 @@ main {
 /* MEDIA QUERYS */
 /* Extra small */
 @media screen and (max-width: 576px) {
-  .main__logo{
+  .main__logo {
     width: 130px;
   }
   .main__description {
@@ -433,6 +435,8 @@ main {
     width: 85%;
     height: 45vh;
     padding: 50px 20px;
+    background-position: 100px, center, 75%, center;
+    background-size: auto 10%, auto 90%, auto 20%, 100% 100%;
   }
   .contact__icon {
     font-size: 40px;
