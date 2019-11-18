@@ -195,8 +195,8 @@ main {
 .main__description {
   font-size: 18px;
   color: var(--white);
-  margin: 15px 25%;
-  text-align: justify;
+  margin: 5px 25%;
+  text-align: center;
 }
 
 .icons {
@@ -404,8 +404,11 @@ main {
 /* MEDIA QUERYS */
 /* Extra small */
 @media screen and (max-width: 576px) {
+  .main__logo{
+    width: 130px;
+  }
   .main__description {
-    margin: 20px 10%;
+    margin: 5px 10%;
   }
   .main__name {
     font-size: 50px;
