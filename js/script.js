@@ -39,25 +39,36 @@ function getSectionPositions() {
   sections.forEach((element) => {
     sectionPositions[element.id] = element.getBoundingClientRect().top;
   });
-  console.log(sectionPositions);
 }
 
-function scrollInSections() {
+function selectSectionWhenScroll() {
   window.onscroll = function(e) {
-    // print "false" if direction is down and "true" if up
-    console.log(this.oldScroll > this.scrollY);
-    if (this.oldScroll > this.scrollY) {
-    } else {
-      // window.scrollTo({
-      //   top: 500,
-      //   behavior: 'smooth'
-      // });
+    if (this.scrollY >= sectionPositions.aboutme && this.scrollY < sectionPositions.projects) {
+      selectItem('aboutme');
+    } else if (this.scrollY >= sectionPositions.projects && this.scrollY < sectionPositions.contact) {
+      selectItem('projects');
+    } else if (this.scrollY >= sectionPositions.contact) {
+      selectItem('contact');
     }
-    this.oldScroll = this.scrollY;
   };
 }
 
+// function scrollInSections() {
+//   window.onscroll = function(e) {
+//     // print "false" if direction is down and "true" if up
+//     console.log(this.oldScroll > this.scrollY);
+//     if (this.oldScroll > this.scrollY) {
+//     } else {
+//       // window.scrollTo({
+//       //   top: 500,
+//       //   behavior: 'smooth'
+//       // });
+//     }
+//     this.oldScroll = this.scrollY;
+//   };
+// }
+
 moveBackground();
 getSectionPositions();
-scrollInSections();
+selectSectionWhenScroll();
 selectInitialItem();
