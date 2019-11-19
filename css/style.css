@@ -31,6 +31,7 @@ body {
   background: url(../assets/bg1.png), rgba(24, 29, 30, 1);
   font-family: 'Roboto', sans-serif;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 *,
@@ -425,6 +426,9 @@ main {
 /* MEDIA QUERYS */
 /* Extra small */
 @media screen and (max-width: 576px) {
+  body{
+    overflow-y: auto;
+  }
   nav {
     position: fixed;
     right: 0;
@@ -498,9 +502,4 @@ main {
 }
 /* Extra large */
 @media (min-width: 1200px) {
-}
-
-/* Scroll */
-body::-webkit-scrollbar {
-  display: none;
 }
