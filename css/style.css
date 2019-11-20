@@ -345,6 +345,8 @@ main {
   border-radius: 5px;
   padding: 5px;
   cursor: pointer;
+  text-decoration: none;
+  color: var(--white);
   background: linear-gradient(
     160deg,
     #ba5eee,
