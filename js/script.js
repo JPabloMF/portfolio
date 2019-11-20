@@ -37,7 +37,6 @@ const App = (function() {
 
   function setEventsBtnMenu() {
     btnmenu.addEventListener('click', () => {
-      alert('test')
       if (openIsOpened) {
         closeMenu();
       } else {
