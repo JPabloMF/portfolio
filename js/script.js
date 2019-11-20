@@ -123,4 +123,5 @@ const App = (function() {
   selectSectionWhenScroll();
   selectInitialItem();
   closeMenuWithItems();
+  setEventsBtnMenu();
 })();
