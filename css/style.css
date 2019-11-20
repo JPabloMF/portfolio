@@ -126,7 +126,7 @@ nav {
 .btnmenu {
   display: none;
   position: fixed;
-  z-index: 50;
+  z-index: 10;
   right: 10px;
   top: 10px;
   background: none;
@@ -488,6 +488,28 @@ main {
   .contact__icon:focus {
     font-size: 50px;
   }
+}
+
+/* preloader */
+.preloader{
+  position: fixed;
+  z-index: 11;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.preloader__text{
+  position: fixed;
+  font-size: 35px;
+  z-index: 12;
+  bottom: 10%;
+  margin: auto;
+  color: var(--white);
+}
+
+canvas{
+  background-color: red;
 }
 
 /* small */
