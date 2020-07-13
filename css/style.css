@@ -143,14 +143,14 @@ nav {
   margin-top: 3px;
 }
 
-.btnmenu__square--1 {
+/* .btnmenu__square--1 {
 }
 
 .btnmenu__square--2 {
 }
 
 .btnmenu__square--3 {
-}
+} */
 
 /* menu responsive */
 .menu-responsive {
@@ -275,13 +275,15 @@ main {
 }
 
 .projects__item {
-  width: 200px;
+  margin-top: 20px;
+  width: 400px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   background-color: #252c35;
-  padding: 20px;
+  padding-bottom: 20px;
   border-radius: 5px;
   box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.75);
   overflow: hidden;
@@ -289,9 +291,7 @@ main {
 
 .project__picture {
   object-fit: contain;
-  margin: 10px 0;
   width: 100%;
-  height: 220px;
 }
 
 .project__commingsoon {
@@ -355,6 +355,10 @@ main {
     #3e6ac8,
     #3f5aa9
   );
+}
+
+.project__wip{
+  color: var(--orange);
 }
 
 /* Contact */
