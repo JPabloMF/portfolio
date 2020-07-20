@@ -10,9 +10,6 @@ const App = (function() {
   const sectionPositions = {};
   let openIsOpened = false;
 
-  // console.log(sections[1].getBoundingClientRect());
-  // console.log(sections);
-
   function openMenu() {
     setTimeout(() => {
       nav.style.width = `${window.screen.width}%`;
@@ -45,13 +42,6 @@ const App = (function() {
     });
   }
 
-  // nav.addEventListener('click', () => {
-  //   // setTimeout(()=>{
-  //   //   nav.style.transform = 'translateX(41vw) translateY(41vh)';
-  //   // },300)
-
-  // });
-
   function moveBackground() {
     const body = document.querySelector('body');
     let translation = 0;
@@ -63,15 +53,15 @@ const App = (function() {
   }
 
   function selectItem(selectedElement) {
-    listItems.forEach((element) => {
-      if (element.hash === `#${selectedElement}`) {
-        element.parentNode.classList.add('menu__item--active');
-      } else if (selectedElement === '') {
-        listItems[0].parentNode.classList.add('menu__item--active');
-      } else {
-        element.parentNode.classList.remove('menu__item--active');
-      }
-    });
+    // listItems.forEach((element) => {
+    //   if (element.hash === `#${selectedElement}`) {
+    //     element.parentNode.classList.add('menu__item--active');
+    //   } else if (selectedElement === '') {
+    //     listItems[0].parentNode.classList.add('menu__item--active');
+    //   } else {
+    //     element.parentNode.classList.remove('menu__item--active');
+    //   }
+    // });
   }
 
   function selectInitialItem() {
@@ -85,23 +75,23 @@ const App = (function() {
     });
   }
 
-  function selectSectionWhenScroll() {
-    window.onscroll = function(e) {
-      if (
-        this.scrollY >= sectionPositions.aboutme &&
-        this.scrollY < sectionPositions.projects
-      ) {
-        selectItem('aboutme');
-      } else if (
-        this.scrollY >= sectionPositions.projects &&
-        this.scrollY < sectionPositions.contact
-      ) {
-        selectItem('projects');
-      } else if (this.scrollY >= sectionPositions.contact) {
-        selectItem('contact');
-      }
-    };
-  }
+  // function selectSectionWhenScroll() {
+  //   window.onscroll = function(e) {
+  //     if (
+  //       this.scrollY >= sectionPositions.aboutme &&
+  //       this.scrollY < sectionPositions.projects
+  //     ) {
+  //       selectItem('aboutme');
+  //     } else if (
+  //       this.scrollY >= sectionPositions.projects &&
+  //       this.scrollY < sectionPositions.contact
+  //     ) {
+  //       selectItem('projects');
+  //     } else if (this.scrollY >= sectionPositions.contact) {
+  //       selectItem('contact');
+  //     }
+  //   };
+  // }
 
   // function scrollInSections() {
   //   window.onscroll = function(e) {
@@ -120,7 +110,7 @@ const App = (function() {
 
   moveBackground();
   getSectionPositions();
-  selectSectionWhenScroll();
+  // selectSectionWhenScroll();
   selectInitialItem();
   closeMenuWithItems();
   setEventsBtnMenu();
